@@ -1,9 +1,10 @@
 import About from "./components/About";
 import Navbar from "./components/Navbar/Navbar";
-import Projects from "./components/Projects";
+
 import { useEffect, useState } from "react";
 import { SelectedPage } from "./shared/types";
 import Home from "./components/Home";
+import Projects from "./components/Projects";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(

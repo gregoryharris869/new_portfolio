@@ -10,10 +10,11 @@ const About = ({ setSelectedPage }: Props) => {
         onViewportEnter={() => setSelectedPage(SelectedPage.About)}
       >
         <div className="mb-10 lg:mb-0">
-          <h1 className="font-medium text-gray-700 text-3xl md:text-4xl mb-5">
+          <h1 className="mb-5 text-3xl font-medium text-gray-700 md:text-4xl">
             About
           </h1>
-          <p className=" mb-3 hyphens-auto text-justify ">
+
+          <p className="mb-3 text-justify hyphens-auto">
             As a frontend developer, I thrive on crafting elegant interfaces
             that captivate users. With a blend of aesthetics and functionality,
             I turn designs into seamless digital experiences, from structured
