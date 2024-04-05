@@ -1,3 +1,7 @@
+import React from "react";
+import Project from "./Project";
+import { projectsData } from "../lib/data";
+
 const Projects = () => {
   return (
     <section className="py-10 md:py-16">
@@ -15,7 +19,15 @@ const Projects = () => {
           </div>
 
           <div className="space-y-24">
-            <div className="flex space-x-6"></div>
+            <div className="flex space-x-6">
+              <div>
+                {projectsData.map((project, index) => (
+                  <React.Fragment key={index}>
+                    <Project {...project} />
+                  </React.Fragment>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
