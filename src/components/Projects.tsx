@@ -1,21 +1,20 @@
 import React from "react";
 import Project from "./Project";
 import { projectsData } from "../lib/data";
+import { FaSquareGithub } from "react-icons/fa6";
 
 const Projects = () => {
   return (
     <section className="py-10 md:py-16">
-      <div className="container  max-w-[50rem] px-4 mx-auto">
-        <div className="flex flex-col justify-between lg:flex-row">
+      <div className="container  max-w-[50rem] px-6 mx-auto">
+        <div className="flex flex-col justify-between lg:flex-row ">
           <div className="mb-10 lg:mb-0">
-            <h1 className="mb-5 text-3xl font-medium text-gray-700 md:text-4xl">
+            <h1 className="pr-4 mb-5 text-3xl font-medium text-gray-700 md:text-4xl">
               Portfolio
             </h1>
-
-            <p className="text-xs font-normal text-gray-500 md:text-base">
-              I have brought here my biggest and favorite works <br />
-              as a professional.
-            </p>
+            <a href="https://github.com" target="_blank" className="">
+              <FaSquareGithub />
+            </a>
           </div>
 
           <div className="space-y-24">
