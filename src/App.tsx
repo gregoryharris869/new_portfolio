@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { SelectedPage } from "./shared/types";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
+import Skills from "./components/Skills";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -34,6 +35,7 @@ function App() {
       <Home setSelectedPage={setSelectedPage} />
       <About setSelectedPage={setSelectedPage} />
       <Projects setSelectedPage={setSelectedPage} />
+      <Skills setSelectedPage={setSelectedPage} />
     </div>
   );
 }

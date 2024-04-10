@@ -38,7 +38,6 @@ export const skillsData = [
   "Bootstrap",
   "Vite",
   "Node.js",
-  "Git",
   "Tailwind",
   "Redux",
   "Framer Motion",
