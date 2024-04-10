@@ -6,13 +6,13 @@ const About = ({ setSelectedPage }: Props) => {
   return (
     <section id="about" className="py-10 md:py-40 md:pb-0">
       <motion.div
-        className="container max-w-[50rem] mx-auto px-4"
+        className="container max-w-[50rem] mx-auto px-6"
         onViewportEnter={() => setSelectedPage(SelectedPage.About)}
       >
         <div className="mb-10 lg:mb-0">
-          <h1 className="mb-5 text-3xl font-medium text-gray-700 md:text-4xl">
+          <h2 className="mb-5 text-2xl font-medium text-gray-700 md:text-4xl">
             About
-          </h1>
+          </h2>
 
           <p className="mb-3 text-justify hyphens-auto">
             As a frontend developer, I thrive on crafting elegant interfaces

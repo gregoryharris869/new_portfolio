@@ -25,9 +25,9 @@ function Contact({ setSelectedPage }: Props) {
   };
 
   return (
-    <section id="contact" className="py-10 md:py-40 md:pb-0">
+    <section id="contact" className="py-10 md:py-40 ">
       <motion.div
-        className="container max-w-[50rem] mx-auto px-4"
+        className="container max-w-[50rem] mx-auto px-6"
         onViewportEnter={() => setSelectedPage(SelectedPage.Contact)}
       >
         {/* HEADER */}
@@ -41,7 +41,9 @@ function Contact({ setSelectedPage }: Props) {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <h2>Contact</h2>
+          <h2 className="mb-5 text-2xl font-medium text-gray-700 md:text-4xl">
+            Contact
+          </h2>
         </motion.div>
         <div className="justify-center gap-8 mt-10 md:flex">
           <motion.div
@@ -116,7 +118,7 @@ function Contact({ setSelectedPage }: Props) {
 
               <button
                 type="submit"
-                className="px-20 py-3 mt-5 transition duration-500 rounded-lg bg-secondary-500 hover:text-white"
+                className="py-3 text-sm font-medium transition duration-500 ease-linear bg-gray-700 rounded-md px-7 md:px-9 md:py-4 md:font-semibold text-gray-50 hover:bg-gray-50 hover:text-gray-700"
               >
                 SUBMIT
               </button>
