@@ -1,7 +1,6 @@
-import corpcommentImg from "../../public/corpcomment.png";
-import rmtdevImg from "../../public/rmtdev.png";
-import wordanalyticsImg from "../../public/wordanalytics.png";
-
+import corpcommentImg from "../assets/Images/corpcomment.png";
+import rmtdevImg from "../assets/Images/rmtdev.png";
+import wordanalyticsImg from "../assets/Images/wordanalytics.png";
 export const projectsData = [
   {
     title: "CorpComment",

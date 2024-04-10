@@ -1,7 +1,131 @@
-type Props = {};
+import { motion } from "framer-motion";
+import { useForm } from "react-hook-form";
+import { SelectedPage } from "../shared/types";
 
-function Contact({}: Props) {
-  return <div>Contact</div>;
+type Props = {
+  setSelectedPage: (value: SelectedPage) => void;
+};
+
+function Contact({ setSelectedPage }: Props) {
+  const inputStyles = `mb-5 w-full rounded-lg bg-primary-300
+  px-5 py-3 placeholder-black`;
+
+  const {
+    register,
+    trigger,
+    formState: { errors },
+  } = useForm();
+
+  const handleSubmit = async (
+    event: React.FormEvent<HTMLFormElement>
+  ): Promise<void> => {
+    event.preventDefault();
+    const isValid = await trigger();
+    if (!isValid) return;
+  };
+
+  return (
+    <section id="contact" className="py-10 md:py-40 md:pb-0">
+      <motion.div
+        className="container max-w-[50rem] mx-auto px-4"
+        onViewportEnter={() => setSelectedPage(SelectedPage.Contact)}
+      >
+        {/* HEADER */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
+          <h2>Contact</h2>
+        </motion.div>
+        <div className="justify-center gap-8 mt-10 md:flex">
+          <motion.div
+            className="mt-10 basis-3/5 md:mt-0"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <form
+              target="_blank"
+              onSubmit={handleSubmit}
+              action="https://formsubmit.co/youremail.com"
+              method="POST"
+            >
+              <input
+                className={inputStyles}
+                type="text"
+                placeholder="NAME"
+                {...register("name", {
+                  required: true,
+                  maxLength: 100,
+                })}
+              />
+              {errors.name && (
+                <p className="mt-1 text-primary-500">
+                  {errors.name.type === "required" && "This field is required."}
+                  {errors.name.type === "maxLength" &&
+                    "Max length is 100 char."}
+                </p>
+              )}
+
+              <input
+                className={inputStyles}
+                type="text"
+                placeholder="EMAIL"
+                {...register("email", {
+                  required: true,
+                  pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                })}
+              />
+              {errors.email && (
+                <p className="mt-1 text-primary-500">
+                  {errors.email.type === "required" &&
+                    "This field is required."}
+                  {errors.email.type === "pattern" && "Invalid email address."}
+                </p>
+              )}
+
+              <textarea
+                className={inputStyles}
+                placeholder="MESSAGE"
+                rows={4}
+                cols={50}
+                {...register("message", {
+                  required: true,
+                  maxLength: 2000,
+                })}
+              />
+              {errors.message && (
+                <p className="mt-1 text-primary-500">
+                  {errors.message.type === "required" &&
+                    "This field is required."}
+                  {errors.message.type === "maxLength" &&
+                    "Max length is 2000 char."}
+                </p>
+              )}
+
+              <button
+                type="submit"
+                className="px-20 py-3 mt-5 transition duration-500 rounded-lg bg-secondary-500 hover:text-white"
+              >
+                SUBMIT
+              </button>
+            </form>
+          </motion.div>
+        </div>
+      </motion.div>
+    </section>
+  );
 }
 
 export default Contact;
