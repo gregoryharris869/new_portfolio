@@ -1,12 +1,11 @@
 import About from "./components/About";
-import Navbar from "./components/Navbar/Navbar";
-
 import { useEffect, useState } from "react";
 import { SelectedPage } from "./shared/types";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -27,7 +26,7 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className="bg-gray-100">
+    <div className="bg-surface1">
       <Navbar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
