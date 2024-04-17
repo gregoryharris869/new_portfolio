@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         brand: "#2B6381",
+        brandAccent: "#F5F5F5",
         text1: "#D2DBDE",
         text2: "#A1A7AA",
         surface1: "#1C2123",

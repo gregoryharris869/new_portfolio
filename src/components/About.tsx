@@ -4,17 +4,27 @@ import { SelectedPage } from "../shared/types";
 type Props = { setSelectedPage: (value: SelectedPage) => void };
 const About = ({ setSelectedPage }: Props) => {
   return (
-    <section id="about" className="py-10 md:py-40 md:pb-0">
+    <section id="about" className="py-10 md:py-40">
       <motion.div
         className="container max-w-[50rem] mx-auto px-6"
         onViewportEnter={() => setSelectedPage(SelectedPage.About)}
       >
-        <div className="mb-10 lg:mb-0">
-          <h2 className="mb-5 text-2xl font-medium text-gray-700 md:text-4xl">
+        <motion.div
+          className="mb-10 lg:mb-0"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
+          <h2 className="mb-5 text-2xl font-medium text-surface1 md:text-4xl">
             About
           </h2>
 
-          <p className="mb-3 text-justify hyphens-auto">
+          <p className="mb-3 text-justify hyphens-auto text-text1">
             As a frontend developer, I thrive on crafting elegant interfaces
             that captivate users. With a blend of aesthetics and functionality,
             I turn designs into seamless digital experiences, from structured
@@ -23,7 +33,7 @@ const About = ({ setSelectedPage }: Props) => {
             performance. Transforming ideas into interactive websites that are
             more user friendly.
           </p>
-        </div>
+        </motion.div>
       </motion.div>
     </section>
   );

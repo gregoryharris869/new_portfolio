@@ -1,7 +1,6 @@
 import React from "react";
 import Project from "./Project";
 import { projectsData } from "../lib/data";
-import { FaSquareGithub } from "react-icons/fa6";
 import { SelectedPage } from "../shared/types";
 import { motion } from "framer-motion";
 
@@ -16,7 +15,7 @@ const Projects = ({ setSelectedPage }: Props) => {
       >
         <div className="flex flex-col justify-between lg:flex-row ">
           <div className="mb-10 lg:mb-0">
-            <h1 className="pr-4 mb-5 text-2xl font-medium text-gray-700 md:text-4xl">
+            <h1 className="pr-4 mb-5 text-2xl font-medium text-surface1 md:text-4xl">
               Portfolio
             </h1>
           </div>
