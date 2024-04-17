@@ -7,7 +7,7 @@ type Props = {
 };
 
 function Contact({ setSelectedPage }: Props) {
-  const inputStyles = `mb-5 w-full rounded-lg bg-primary-300
+  const inputStyles = `mb-5 w-full rounded-lg bg-surface3
   px-5 py-3 placeholder-black`;
 
   const {
@@ -41,7 +41,7 @@ function Contact({ setSelectedPage }: Props) {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <h2 className="mb-5 text-2xl font-medium text-gray-700 md:text-4xl">
+          <h2 className="mb-5 text-2xl font-medium text-textAction md:text-4xl">
             Contact
           </h2>
         </motion.div>
@@ -73,7 +73,7 @@ function Contact({ setSelectedPage }: Props) {
                 })}
               />
               {errors.name && (
-                <p className="mt-1 text-primary-500">
+                <p className="mt-1 text-callAction">
                   {errors.name.type === "required" && "This field is required."}
                   {errors.name.type === "maxLength" &&
                     "Max length is 100 char."}
@@ -90,7 +90,7 @@ function Contact({ setSelectedPage }: Props) {
                 })}
               />
               {errors.email && (
-                <p className="mt-1 text-primary-500">
+                <p className="mt-1 text-callAction">
                   {errors.email.type === "required" &&
                     "This field is required."}
                   {errors.email.type === "pattern" && "Invalid email address."}
@@ -108,7 +108,7 @@ function Contact({ setSelectedPage }: Props) {
                 })}
               />
               {errors.message && (
-                <p className="mt-1 text-primary-500">
+                <p className="mt-1 text-callAction">
                   {errors.message.type === "required" &&
                     "This field is required."}
                   {errors.message.type === "maxLength" &&
@@ -118,7 +118,7 @@ function Contact({ setSelectedPage }: Props) {
 
               <button
                 type="submit"
-                className="py-3 text-sm font-medium transition duration-500 ease-linear bg-gray-700 rounded-md px-7 md:px-9 md:py-4 md:font-semibold text-gray-50 hover:bg-gray-50 hover:text-gray-700"
+                className="py-3 text-sm font-medium transition duration-500 ease-linear rounded-md bg-callAction px-7 md:px-9 md:py-4 md:font-semibold text-gray-50 hover:bg-gray-50 hover:text-gray-700"
               >
                 SUBMIT
               </button>

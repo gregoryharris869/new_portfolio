@@ -20,7 +20,7 @@ const About = ({ setSelectedPage }: Props) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <h2 className="mb-5 text-2xl font-medium text-surface1 md:text-4xl">
+          <h2 className="mb-5 text-2xl font-medium text-textAction md:text-4xl">
             About
           </h2>
 

@@ -25,7 +25,7 @@ export default function Skills({ setSelectedPage }: Props) {
         onViewportEnter={() => setSelectedPage(SelectedPage.Skills)}
       >
         <div className="mb-10 lg:mb-0">
-          <h1 className="mb-5 text-2xl font-medium text-surface1 md:text-4xl">
+          <h1 className="mb-5 text-2xl font-medium text-textAction md:text-4xl">
             Skills
           </h1>
           <ul className="flex flex-wrap justify-center gap-2 text-lg text-brandAccent">
@@ -38,7 +38,7 @@ export default function Skills({ setSelectedPage }: Props) {
                   once: true,
                 }}
                 custom={index}
-                className="px-5 py-3 bg-surface3 borderBlack rounded-xl "
+                className="px-5 py-3 bg-surface4 borderBlack rounded-xl "
                 key={index}
               >
                 {skills}

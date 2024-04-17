@@ -16,12 +16,14 @@ type Props = {
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const isAboveMdScreens = useMediaQuery("(min-width: 1060px)");
-  const navbarBackground = isTopOfPage ? "" : "bg-surface4  drop-shadow xl";
+  const navbarBackground = isTopOfPage
+    ? ""
+    : "bg-surface2 opacity-95  drop-shadow xl";
   const flexStandard = "flex justify-between items-center";
   return (
     <nav>
       <div
-        className={`${navbarBackground} ${flexStandard} fixed top-0 z-30 w-full py-6`}
+        className={`${navbarBackground} ${flexStandard} fixed top-0 z-30 w-full py-2`}
       >
         <div className={`${flexStandard} mx-auto w-5/6`}>
           <div className={`${flexStandard} w-full gap-16`}>
@@ -60,7 +62,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
               </div>
             ) : (
               <button
-                className="p-2 rounded-full bg-surface1"
+                className="p-2 rounded-full bg-callAction"
                 onClick={() => setIsMenuToggled(!isMenuToggled)}
               >
                 <HiBars3 className="w-6 h-6 text-text1" />
@@ -72,7 +74,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
       {/* Mobile */}
       {!isAboveMdScreens && isMenuToggled && (
-        <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-text2 drop-shadow-xl">
+        <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-text1 drop-shadow-xl">
           {/* Close icon */}
           <div className="flex justify-end p-12">
             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>

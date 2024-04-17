@@ -4,15 +4,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        brand:
-          "bg-gradient-to-b from-white to-gray-200 via-green-400 to-blue-600",
-        brandAccent: "#F5F5F5",
-        text1: "#D2DBDE",
-        text2: "#A1A7AA",
-        surface1: "#1C2123",
-        surface2: "#252A2C",
-        surface3: "#303436",
-        surface4: "#3F4244",
+        text1: "#F5F5F5",
+        text2: "#D2DBDE",
+        text3: "#A1A7AA",
+        textAction: "#BE185D",
+        surface1: "#1e293b",
+        surface2: "#475569",
+        surface3: "#cbd5e1",
+        surface4: "#fffff3",
+        callAction: "#0EA5E9",
         surfaceShadow: "#363A3C",
         shadowStrength: 0.8,
       },
