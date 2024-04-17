@@ -3,3 +3,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,
+body,
+#root,
+.app {
+  @apply bg-gradient-to-b from-sky-200 to-indigo-800;
+}

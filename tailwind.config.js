@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        brand: "#2B6381",
+        brand:
+          "bg-gradient-to-b from-white to-gray-200 via-green-400 to-blue-600",
         brandAccent: "#F5F5F5",
         text1: "#D2DBDE",
         text2: "#A1A7AA",
