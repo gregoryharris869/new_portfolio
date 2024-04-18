@@ -6,7 +6,7 @@ const About = ({ setSelectedPage }: Props) => {
   return (
     <section id="about" className="py-10 md:py-40">
       <motion.div
-        className="container max-w-[50rem] mx-auto px-6"
+        className="container max-w-[50rem] mx-auto p-6"
         onViewportEnter={() => setSelectedPage(SelectedPage.About)}
       >
         <motion.div

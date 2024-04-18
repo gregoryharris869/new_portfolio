@@ -8,9 +8,9 @@ type Props = { setSelectedPage: (value: SelectedPage) => void };
 
 const Projects = ({ setSelectedPage }: Props) => {
   return (
-    <section id="projects" className="py-10 md:py-16">
+    <section id="projects" className="py-10 md:py-16 ">
       <motion.div
-        className="container  max-w-[50rem] px-6 mx-auto"
+        className="container  max-w-[50rem] p-6 mx-auto bg-surface2 rounded-lg"
         onViewportEnter={() => setSelectedPage(SelectedPage.Projects)}
       >
         <div className="flex flex-col justify-between lg:flex-row ">

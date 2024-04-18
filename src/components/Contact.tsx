@@ -7,7 +7,7 @@ type Props = {
 };
 
 function Contact({ setSelectedPage }: Props) {
-  const inputStyles = `mb-5 w-full rounded-lg bg-surface3
+  const inputStyles = `mb-5 w-full rounded-lg bg-text1
   px-5 py-3 placeholder-black`;
 
   const {
@@ -27,7 +27,7 @@ function Contact({ setSelectedPage }: Props) {
   return (
     <section id="contact" className="py-10 md:py-40 ">
       <motion.div
-        className="container max-w-[50rem] mx-auto px-6"
+        className="container max-w-[50rem] mx-auto p-6 bg-surface2 rounded-lg "
         onViewportEnter={() => setSelectedPage(SelectedPage.Contact)}
       >
         {/* HEADER */}

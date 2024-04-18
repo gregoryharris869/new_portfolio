@@ -8,9 +8,9 @@ const textVariant = "text-2xl font-semibold text-textAction";
 
 const Home = ({ setSelectedPage }: Props) => {
   return (
-    <section id="home" className="py-10 md:py-40">
+    <section id="home" className=" md:py-40">
       <motion.div
-        className="container max-w-screen-xl px-4 mx-auto"
+        className="container max-w-screen-xl p-10 mx-auto"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
         <motion.div
@@ -24,11 +24,11 @@ const Home = ({ setSelectedPage }: Props) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <h6 className="mt-16 mb-8 text-lg font-medium text-text1 md:text-3xl">
+          <h6 className="pt-16 pb-8 text-lg font-medium text-text1 md:text-3xl">
             Gregory Harris
           </h6>
 
-          <h1 className="mb-8 text-4xl font-normal leading-none text-text2 md:text-7xl">
+          <h1 className="pb-8 text-4xl font-normal leading-none text-text2 md:text-7xl">
             Front-end Developer
           </h1>
 
@@ -37,7 +37,6 @@ const Home = ({ setSelectedPage }: Props) => {
             <span className={textVariant}>React</span> and{" "}
             <span className={textVariant}>Next.js</span>.
           </p>
-
           <ActionButton setSelectedPage={setSelectedPage}>Contact</ActionButton>
         </motion.div>
       </motion.div>
