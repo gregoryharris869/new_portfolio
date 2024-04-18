@@ -6,6 +6,8 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Navbar from "./components/Navbar/Navbar";
+import SocialIcons from "./components/SocialIcons";
+import Footer from "./components/Footer";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -33,10 +35,12 @@ function App() {
         setSelectedPage={setSelectedPage}
       />
       <Home setSelectedPage={setSelectedPage} />
+      <SocialIcons />
       <About setSelectedPage={setSelectedPage} />
       <Projects setSelectedPage={setSelectedPage} />
       <Skills setSelectedPage={setSelectedPage} />
       <Contact setSelectedPage={setSelectedPage} />
+      <Footer />
     </div>
   );
 }

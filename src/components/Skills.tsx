@@ -21,11 +21,11 @@ export default function Skills({ setSelectedPage }: Props) {
   return (
     <section id="skills" className="py-10 md:py-40 ">
       <motion.div
-        className="container max-w-[50rem] mx-auto px-6"
+        className="container max-w-[50rem] mx-auto p-6"
         onViewportEnter={() => setSelectedPage(SelectedPage.Skills)}
       >
-        <div className="mb-10 lg:mb-0">
-          <h1 className="mb-5 text-2xl font-medium text-textAction md:text-4xl">
+        <div className="pb-10 md:mb-0">
+          <h1 className="pb-5 text-2xl font-medium text-textAction md:text-4xl">
             Skills
           </h1>
           <ul className="flex flex-wrap justify-center gap-2 text-lg text-brandAccent">
