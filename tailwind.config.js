@@ -12,6 +12,7 @@ export default {
         surface2: "#475569",
         surface3: "#cbd5e1",
         surface4: "#fffff3",
+
         callAction: "#0EA5E9",
         surfaceShadow: "#363A3C",
         shadowStrength: 0.8,

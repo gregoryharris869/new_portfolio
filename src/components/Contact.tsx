@@ -6,6 +6,8 @@ type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
+const surface5 = "bg-gradient-to-t from-slate-600 to-cyan-700";
+
 function Contact({ setSelectedPage }: Props) {
   const inputStyles = `mb-5 w-full rounded-lg bg-text1
   px-5 py-3 placeholder-black`;
@@ -27,7 +29,7 @@ function Contact({ setSelectedPage }: Props) {
   return (
     <section id="contact" className="py-10 md:py-40 ">
       <motion.div
-        className="container max-w-[50rem] mx-auto p-6 bg-surface2 rounded-lg "
+        className={`${surface5} container max-w-[50rem] mx-auto p-6  rounded-lg `}
         onViewportEnter={() => setSelectedPage(SelectedPage.Contact)}
       >
         {/* HEADER */}

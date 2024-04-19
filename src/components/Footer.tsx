@@ -5,8 +5,8 @@ function Footer() {
         &copy; 2024 GH Frontend-end Developer. All rights reserved.
       </small>
       <p className="text-xs">
-        <span className="font-semibold">About this website:</span> built with
-        React TypeScript, Tailwind CSS, Framer Motion.
+        <span className="font-semibold">About this website:</span> Built with
+        React, TypeScript, Tailwind CSS, Framer Motion.
       </p>
     </footer>
   );

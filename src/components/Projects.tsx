@@ -6,11 +6,13 @@ import { motion } from "framer-motion";
 
 type Props = { setSelectedPage: (value: SelectedPage) => void };
 
+const surface5 = "bg-gradient-to-t from-slate-600 to-cyan-700";
+
 const Projects = ({ setSelectedPage }: Props) => {
   return (
     <section id="projects" className="py-10 md:py-16 ">
       <motion.div
-        className="container  max-w-[50rem] p-6 mx-auto bg-surface2 rounded-lg"
+        className={`${surface5} container  max-w-[50rem] p-6 mx-auto  rounded-lg`}
         onViewportEnter={() => setSelectedPage(SelectedPage.Projects)}
       >
         <div className="flex flex-col justify-between lg:flex-row ">
