@@ -24,13 +24,13 @@ const Home = ({ setSelectedPage }: Props) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <h6 className="pt-16 pb-8 text-lg font-medium text-text1 md:text-3xl">
-            Gregory Harris
-          </h6>
-
-          <h1 className="pb-8 text-4xl font-normal leading-none text-text2 md:text-7xl">
+          <h1 className="p-8 text-4xl font-medium leading-none text-text2 md:text-7xl">
             Front-end Developer
           </h1>
+
+          <h2 className="p-8 text-2xl font-medium text-text1 md:text-4xl">
+            Gregory Harris
+          </h2>
 
           <p className="mb-16 font-normal text-text2 text-md md:text-xl">
             A passionate front-end developer, with focus on{" "}
