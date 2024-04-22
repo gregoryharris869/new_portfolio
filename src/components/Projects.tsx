@@ -17,7 +17,7 @@ const Projects = ({ setSelectedPage }: Props) => {
       >
         <div className="flex flex-col justify-between lg:flex-row ">
           <div className="mb-10 lg:mb-0">
-            <h1 className="pr-4 mb-5 text-2xl font-medium text-textAction md:text-4xl">
+            <h1 className="pr-4 mb-5 text-2xl font-medium text-textAction2 md:text-4xl">
               Portfolio
             </h1>
           </div>

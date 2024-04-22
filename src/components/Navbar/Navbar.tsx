@@ -24,9 +24,9 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
         className={`${navbarBackground} ${flexStandard} fixed top-0 z-30 w-full py-2`}
       >
         <div className={`${flexStandard} mx-auto w-5/6`}>
-          <div className={`${flexStandard} w-full gap-16`}>
+          <div className={`${flexStandard}  w-full gap-16 `}>
             {/* Left side logo */}
-            <img alt="logo" src={gh} w-50 h-50 />
+            <img alt="logo" src={gh} className="w-15 h-15" />
             {/* Right side */}
             {isAboveMdScreens ? (
               <div className={`${flexStandard} w-full`}>
@@ -72,7 +72,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
       {/* Mobile */}
       {!isAboveMdScreens && isMenuToggled && (
-        <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-text1 drop-shadow-xl">
+        <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-text3 drop-shadow-xl">
           {/* Close icon */}
           <div className="flex justify-end p-12">
             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>

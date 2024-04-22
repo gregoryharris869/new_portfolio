@@ -8,6 +8,7 @@ export default {
         text2: "#D2DBDE",
         text3: "#A1A7AA",
         textAction: "#BE185D",
+        textAction2: "#00D6D6",
         surface1: "#1e293b",
         surface2: "#475569",
         surface3: "#cbd5e1",
