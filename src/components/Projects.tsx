@@ -1,5 +1,6 @@
 import React from "react";
 import Project from "./Project";
+
 import { projectsData } from "../lib/data";
 import { SelectedPage } from "../shared/types";
 import { motion } from "framer-motion";
